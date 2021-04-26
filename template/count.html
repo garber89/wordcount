@@ -1,0 +1,19 @@
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+</nav>
+<h1>There are {{ count }} words in your text!</h1>
+
+<h1>Your Text:</h1>
+<h2>{{ fulltext }}</h2>
+
+<h1>Word Count:</h1>
+{% for word, counttotal in sorted %}
+
+
+
+
+    ({{ word }})- appears: {{ counttotal }} times
+<hr>
+
+{% endfor %}
